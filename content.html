@@ -1,0 +1,310 @@
+
+<div class="container">
+	<div class="row-fluid">
+		<div class="col-md-12">
+			<h1>MenuTest</h1>
+			<hr />
+			<p>Dies ist eine Test-Applikation, um verschiedene - und eher komplexere - Menu-Strukturen auszuprobieren. Als Vorlage wird die Menu-Struktur von Sublime Text 2 nachgebildet. Wenn den Menu Entries noch keine States hinterlegt sind,  passiert nichts wenn ein Menu-Eintrag ausgewählt wird.</p>
+			<p><strong>Achtung</strong>: Submenus sind seit Bootstrap 3 nicht mehr direkt unterstützt. Doch mit wenigen Zeilen CSS sind sie realierbar. Siehe menutest.css und <a href="http://www.bootply.com/tagged/submenu">bootply.com</a>.</p>
+			<p></p>
+			<p class="pull-right">Selektierter Menu-Eintrag: <strong ui-view=""></strong></p>
+			<p></p>
+			<p>Das Beispiel unterstützt aktuell die folgenden Menu-Einträge:</p>
+
+			<accordion close-others="true">
+				<accordion-group is-open="status1.open">
+					<accordion-heading>
+						File
+						<i class="pull-right glyphicon" 
+							ng-class="{'glyphicon-chevron-down': status1.open, 'glyphicon-chevron-right': !status1.open}"></i>
+					</accordion-heading>
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<td><strong>Menu Entry</strong></td>
+								<td><strong>State</strong></td>
+								<td><strong>Action Description</strong></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>New File</td>
+								<td>menutest.newFile</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Open...</td>
+								<td>menutest.open</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Open Recent</td>
+								<td>menutest.openRecent</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Reopen with Encoding</td>
+								<td>-</td>
+								<td>Submenu</td>
+							</tr>
+							<tr>
+								<td>New View into File</td>
+								<td>menutest.newView</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Save</td>
+								<td>menutest.save</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Save with Encoding</td>
+								<td>menutest.saveEncoding</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Save As...</td>
+								<td>menutest.saveAs</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Save All</td>
+								<td>menutest.saveAll</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>New Window</td>
+								<td>menutest.newWindow</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Close Window</td>
+								<td>menutest.closeWindow</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Close File</td>
+								<td>menutest.closeFile</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Revert File</td>
+								<td>menutest.revertFile</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Close All Files</td>
+								<td>menutest.closeAllFiles</td>
+								<td>active, show state</td>
+							</tr>
+						</tbody>
+					</table>
+				</accordion-group>
+				<accordion-group is-open="status2.open">
+					<accordion-heading>
+						Edit
+						<i class="pull-right glyphicon" 
+							ng-class="{'glyphicon-chevron-down': status2.open, 'glyphicon-chevron-right': !status2.open}"></i>
+					</accordion-heading>
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<td><strong>Menu Entry</strong></td>
+								<td><strong>State</strong></td>
+								<td><strong>Action Description</strong></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Undo Cut</td>
+								<td>menutest.undoCut</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Repeat cut</td>
+								<td>menutest.repeatCut</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Undo Selection</td>
+								<td>menutest.undoSelection</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Copy</td>
+								<td>menutest.copy</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Cut</td>
+								<td>menutest.cut</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Paste</td>
+								<td>menutest.paste</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Paste and Indent</td>
+								<td>menutest.pasteAndIndent</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Line</td>
+								<td>menutest.line</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Comment</td>
+								<td>menutest.comment</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Text</td>
+								<td>menutest.text</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Tag</td>
+								<td>menutest.tag</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Mark</td>
+								<td>menutest.mark</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Code Folding</td>
+								<td>menutest.codeFolding</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Convert Case</td>
+								<td>menutest.convertCase</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Wrap</td>
+								<td>menutest.wrap</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Show Completions</td>
+								<td>menutest.showCompletions</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Sort Lines</td>
+								<td>menutest.sortLines</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Sort Lines (Case Sensitive)</td>
+								<td>menutest.sortLinesCaseSensitive</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Permute Lines</td>
+								<td>menutest.permuteLines</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Permute Selections</td>
+								<td>menutest.permuteSelections</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Special Characters...</td>
+								<td>menutest.specialCharacters</td>
+								<td>active, show state</td>
+							</tr>
+						</tbody>
+					</table>
+				</accordion-group>
+				<accordion-group is-open="status3.open">
+					<accordion-heading>
+						Selection
+						<i class="pull-right glyphicon" 
+							ng-class="{'glyphicon-chevron-down': status3.open, 'glyphicon-chevron-right': !status3.open}"></i>
+					</accordion-heading>
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<td><strong>Menu Entry</strong></td>
+								<td><strong>State</strong></td>
+								<td><strong>Action Description</strong></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Split into Lines</td>
+								<td>menutest.splitIntoLines</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<tr>
+									<td>Add Previous Line</td>
+									<td>menutest.addPreviousLine</td>
+									<td>active, show state</td>
+								</tr>
+								<tr>
+									<td>Add Next Line</td>
+									<td>menutest.addNextLine</td>
+									<td>active, show state</td>
+								</tr>
+								<tr>
+									<td>Single Selection</td>
+									<td>menutest.singleSelection</td>
+									<td>active, show state</td>
+								</tr>
+								<td>Select All</td>
+								<td>menutest.selectAll</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Expand Selection to Line</td>
+								<td>menutest.expandSelectionLine</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Expand Selection to Word</td>
+								<td>menutest.expandSelectionWord</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Expand Selection to Paragraph</td>
+								<td>menutest.expandSelectionParagraph</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Expand Selection to Scope</td>
+								<td>menutest.expandSelectionScope</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Expand Selection to Brackets</td>
+								<td>menutest.expandSelectionBrackets</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Expand Selection to Indentation</td>
+								<td>menutest.expandSelectionIndentation</td>
+								<td>active, show state</td>
+							</tr>
+							<tr>
+								<td>Expand Selection to Tag</td>
+								<td>menutest.expandSelectionTag</td>
+								<td>active, show state</td>
+							</tr>
+						</tbody>
+					</table>
+				</accordion-group>
+				<div class="pull-right">
+					<a class="btn btn-inverse btn-success" href="/">OK</a>
+				</div>
+			</accordion>
+		</div>
+	</div>
+</div>
