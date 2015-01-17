@@ -1,7 +1,9 @@
 'use strict';
 
-// not used placeholder
 angular.module('menutest')
-  .controller('MenutestCtrl', function ($scope, AppConfig) {
-	AppConfig.setCurrentApp('MenutestAppName', 'fa-tumblr', 'menutest', 'app/menutest/menu.html');
-  });
+.controller('MenutestCtrl', function ($scope, $log, cfg) {
+	cfg.GENERAL.CURRENT_APP = 'menutest';
+//	$translatePartialLoader.addPart('menutest');
+
+	$log.log('MenutestCtrl/cfg = ' + JSON.stringify(cfg));
+});
