@@ -5,5 +5,5 @@ angular.module('menutest')
 	cfg.GENERAL.CURRENT_APP = 'menutest';
 //	$translatePartialLoader.addPart('menutest');
 
-	$log.log('MenutestCtrl/cfg = ' + JSON.stringify(cfg));
+	$log.log('MenutestCtrl/cfg = ' + JSON.stringify(cfg, null, '\t'));
 });
